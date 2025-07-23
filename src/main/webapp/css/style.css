@@ -1,0 +1,34 @@
+@charset "UTF-8";
+* {
+ margin: 0;
+ padding: 0;
+}
+table {
+ border-collapse: collapse;
+}
+table, td, th {
+ border: solid 1px #000000;
+}
+td, th {
+ padding: 5px 10px;
+}
+img {
+ max-height: 100px;
+}
+header {
+ background-color: #336633;
+}
+h1 {
+ color: #ffffff;
+ padding-top: 20px;
+ padding-bottom: 10px;
+ text-align: center;
+}
+main {
+ width: 600px;
+ margin: 20px auto;
+}
+.buttonArea {
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
