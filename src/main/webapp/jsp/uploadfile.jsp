@@ -5,7 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>画像一覧</title>
-<style>
+<link  rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--style>
 * {
 margin: 0;
 padding: 0;
@@ -39,7 +42,7 @@ margin: 20px auto;
 margin-top: 10px;
 margin-bottom: 10px;
 }
-</style>
+</style-->
 <script>
 // 送信するかの確認メッセージを出し、OK なら true、NG なら false を返す
 function submitCheck(){
@@ -61,12 +64,11 @@ return false; // 送信を中止
 <button type="submit">削除</button>
 <a href="./html/uploadform.html"><button type="button">新規登録</button></a>
 </div>
-<table>
-<tr>
-<th>削除</th>
-<th>画像</th>
-<th>ファイル名</th>
-<tr>
+
+
+
+
+<main class="gazoulist">
 <%
 // 画像用フォルダのパス
 String imagePath = "images/";
@@ -78,16 +80,20 @@ for (File file : files) {
 String name = file.getName();
 String path = imagePath + name;
 %>
-<tr>
-<td><input type="checkbox" name="check" value="<%=name %>"></td>
-<td><img src="<%=path %>" alt="画像ファイル"></td>
-<td><%=name %></td>
-</tr>
+
+ <div class="gazou">
+ <div>
+ <input type="checkbox" name="check" value="<%=name %>">
+ 削除
+ </div>
+<div><img src="<%=path %>" alt="画像ファイル"></div>
+<div><%=name %></div></div>
+
 <%
 }
 }
-%>
-</table>
+%></main>
+
 </form>
 </main>
 </body>

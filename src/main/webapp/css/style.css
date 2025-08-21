@@ -6,14 +6,13 @@
 table {
  border-collapse: collapse;
 }
-table, td, th {
- border: solid 1px #000000;
-}
+
 td, th {
  padding: 5px 10px;
 }
 img {
- max-height: 100px;
+ max-height: 150px;
+ max-width: 190px;
 }
 header {
  background-color: #336633;
@@ -31,4 +30,16 @@ main {
 .buttonArea {
  margin-top: 10px;
  margin-bottom: 10px;
+}
+.gazoulist{
+display: grid; /* グリッドビューにする宣言 */
+grid-template-columns: repeat(4, 1fr); /* 横並びで４回繰り返し、均等幅 */
+row-gap: 2px; /* 行と行の間隔を２ピクセルにする */
+column-gap: 2px; 
+padding: 10px;
+}
+.gazou{
+	border: solid 1px #000000;
+	padding: 10px;
+	background-color: white;
 }
